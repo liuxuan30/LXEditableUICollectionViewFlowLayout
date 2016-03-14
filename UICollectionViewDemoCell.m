@@ -46,8 +46,8 @@
         self.deleteButton.center = CGPointMake(x - BUTTON_MARGIN, y + BUTTON_MARGIN);
         [self.deleteButton setHidden:((LXEditableFlowLayoutAttributes *) layoutAttributes).setDeleteButtonHidden];
         
-        // Due to Apple's patent, we cannot shake anymore
-//        ((LXEditableFlowLayoutAttributes *) layoutAttributes).setDeleteButtonHidden ? [self stopShaking] : [self startShaking];
+        // Due to Apple's patent, we cannot shake in public app, just a demo
+        ((LXEditableFlowLayoutAttributes *) layoutAttributes).setDeleteButtonHidden ? [self stopShaking] : [self startShaking];
     }
 }
 
