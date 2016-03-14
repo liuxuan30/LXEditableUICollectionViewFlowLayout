@@ -22,6 +22,9 @@
 
 #import "UICollectionViewDemoCell.h"
 
+static CGFloat BUTTON_SIZE = 22;
+static CGFloat BUTTON_MARGIN = 2;
+
 @implementation UICollectionViewDemoCell
 
 -(void)awakeFromNib {
@@ -41,8 +44,8 @@
 -(void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
     [super applyLayoutAttributes:layoutAttributes];
     if ([layoutAttributes isKindOfClass:[LXEditableFlowLayoutAttributes class]]) {
-        CGFloat x = CGRectGetWidth(self.bounds) - BADGE_SIZE/2;
-        CGFloat y = BADGE_SIZE/2;
+        CGFloat x = CGRectGetWidth(self.bounds) - BUTTON_SIZE/2;
+        CGFloat y = BUTTON_SIZE/2;
         self.deleteButton.center = CGPointMake(x - BUTTON_MARGIN, y + BUTTON_MARGIN);
         [self.deleteButton setHidden:((LXEditableFlowLayoutAttributes *) layoutAttributes).setDeleteButtonHidden];
         
