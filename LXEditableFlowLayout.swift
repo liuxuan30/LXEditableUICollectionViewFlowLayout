@@ -67,7 +67,7 @@ public class LXEditableFlowLayout: UICollectionViewFlowLayout, UIGestureRecogniz
         case toEnd
         case stay
         
-        private func scrollValue(#speedValue: CGFloat, percentage: CGFloat) -> CGFloat {
+        private func scrollValue(speedValue speedValue: CGFloat, percentage: CGFloat) -> CGFloat {
             var value: CGFloat = 0.0
             switch self {
             case toTop:
